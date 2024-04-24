@@ -1,0 +1,11 @@
+stages:
+  -deploy
+
+Deploy to stage:
+  stage: deploy
+  target:
+    - main
+  script:
+    - cp $ENV_STAGE .env
+  tags:
+    - dev
